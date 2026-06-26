@@ -1,0 +1,30 @@
+{
+  "name": "wiki-plugin-mermaid",
+  "version": "0.1.0",
+  "description": "Mermaid authoring item for Federated Wiki. Item text is raw Mermaid source. Renders via local Kroki with public fallback. Part of the Visual Plugin Family.",
+  "type": "module",
+  "main": "client/mermaid.js",
+  "files": [
+    "client",
+    "pages",
+    "factory.json"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "@fortyfoxes/wiki-capsule": "^0.1.0"
+  },
+  "author": "David Bovill",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hitchhikers-Guide-to-the-Galaxy/wiki-plugin-mermaid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hitchhikers-Guide-to-the-Galaxy/wiki-plugin-mermaid/issues"
+  },
+  "homepage": "https://github.com/Hitchhikers-Guide-to-the-Galaxy/wiki-plugin-mermaid#readme"
+}

@@ -1,0 +1,138 @@
+{
+  "title": "About Mermaid Plugin",
+  "plugin": "mermaid",
+  "story": [
+    {
+      "type": "markdown",
+      "id": "f88ead7a5c849946",
+      "text": "Mermaid diagram authoring item for Federated Wiki. Item text is raw Mermaid source — no type prefix needed. Renders via local Kroki (`localhost:8000`) with fallback to `kroki.io`. The friendlier sibling of the [[Generic Diagram Plugin]] for Mermaid authors."
+    },
+    {
+      "type": "mermaid",
+      "id": "d3b1e2bddfcc1469",
+      "text": "graph LR\n  A[Write Mermaid] --> B[Kroki renders SVG]\n  B --> C[Wiki displays it]\n  C --> D[Click to fullscreen]"
+    },
+    {
+      "type": "markdown",
+      "id": "3ffde9d6d2674458",
+      "text": "## Diagram Types"
+    },
+    {
+      "type": "markdown",
+      "id": "c6c142da49efadb6",
+      "text": "Any diagram type Mermaid supports. The badge shows the detected type."
+    },
+    {
+      "type": "mermaid",
+      "id": "7e6953e6b9ecbfbc",
+      "text": "sequenceDiagram\n  Author->>Mermaid Plugin: types source\n  Mermaid Plugin->>Kroki: POST /mermaid/svg\n  Kroki-->>Mermaid Plugin: SVG\n  Mermaid Plugin-->>Author: renders in column"
+    },
+    {
+      "type": "mermaid",
+      "id": "e8ef8d07c0c0fde4",
+      "text": "gantt\n  title Visual Plugin Family Build\n  dateFormat YYYY-MM-DD\n  section Stage 1\n  SVG Plugin        :done, 2026-06-24, 1d\n  section Stage 2\n  Kroki Install     :done, 2026-06-25, 1d\n  section Stage 3\n  Diagram Plugin    :done, 2026-06-25, 1d\n  section Stage 4\n  Mermaid Plugin    :active, 2026-06-25, 1d\n  section Stage 5\n  Timeline Plugin   :2026-06-26, 7d"
+    },
+    {
+      "type": "markdown",
+      "id": "df9b00e7ab4a93d4",
+      "text": "## Rendering"
+    },
+    {
+      "type": "markdown",
+      "id": "52d87cecffb05338",
+      "text": "Tries `http://localhost:8000` first (local Kroki via Docker). Falls back to `https://kroki.io` if local is unreachable. SVG is sanitised before display — `<script>`, inline event handlers, and remote resource references stripped. `<foreignObject>` contents are sanitised rather than stripped, preserving Mermaid 11 node labels."
+    },
+    {
+      "type": "markdown",
+      "id": "e92fc9d71ff88f11",
+      "text": "## Difference from Diagram Plugin"
+    },
+    {
+      "type": "markdown",
+      "id": "15368d405263c671",
+      "text": "The [[Generic Diagram Plugin]] takes a type keyword on the first line (`mermaid`, `graphviz`, `d2`…). This plugin assumes Mermaid — no prefix needed. Use it when you know you're writing Mermaid; use the diagram plugin for mixed or multi-language pages."
+    },
+    {
+      "type": "markdown",
+      "id": "5ea505d6ca2cb706",
+      "text": "## Repositories"
+    },
+    {
+      "type": "markdown",
+      "id": "8a5c200113ea8985",
+      "text": "- [GitHub — wiki-plugin-mermaid](https://github.com/Hitchhikers-Guide-to-the-Galaxy/wiki-plugin-mermaid)\n- [npm — wiki-plugin-mermaid](https://www.npmjs.com/package/wiki-plugin-mermaid)"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Mermaid Plugin",
+        "story": [
+          {
+            "type": "markdown",
+            "id": "f88ead7a5c849946",
+            "text": "Mermaid diagram authoring item for Federated Wiki. Item text is raw Mermaid source — no type prefix needed. Renders via local Kroki (`localhost:8000`) with fallback to `kroki.io`. The friendlier sibling of the [[Generic Diagram Plugin]] for Mermaid authors."
+          },
+          {
+            "type": "mermaid",
+            "id": "d3b1e2bddfcc1469",
+            "text": "graph LR\n  A[Write Mermaid] --> B[Kroki renders SVG]\n  B --> C[Wiki displays it]\n  C --> D[Click to fullscreen]"
+          },
+          {
+            "type": "markdown",
+            "id": "3ffde9d6d2674458",
+            "text": "## Diagram Types"
+          },
+          {
+            "type": "markdown",
+            "id": "c6c142da49efadb6",
+            "text": "Any diagram type Mermaid supports. The badge shows the detected type."
+          },
+          {
+            "type": "mermaid",
+            "id": "7e6953e6b9ecbfbc",
+            "text": "sequenceDiagram\n  Author->>Mermaid Plugin: types source\n  Mermaid Plugin->>Kroki: POST /mermaid/svg\n  Kroki-->>Mermaid Plugin: SVG\n  Mermaid Plugin-->>Author: renders in column"
+          },
+          {
+            "type": "mermaid",
+            "id": "e8ef8d07c0c0fde4",
+            "text": "gantt\n  title Visual Plugin Family Build\n  dateFormat YYYY-MM-DD\n  section Stage 1\n  SVG Plugin        :done, 2026-06-24, 1d\n  section Stage 2\n  Kroki Install     :done, 2026-06-25, 1d\n  section Stage 3\n  Diagram Plugin    :done, 2026-06-25, 1d\n  section Stage 4\n  Mermaid Plugin    :active, 2026-06-25, 1d\n  section Stage 5\n  Timeline Plugin   :2026-06-26, 7d"
+          },
+          {
+            "type": "markdown",
+            "id": "df9b00e7ab4a93d4",
+            "text": "## Rendering"
+          },
+          {
+            "type": "markdown",
+            "id": "52d87cecffb05338",
+            "text": "Tries `http://localhost:8000` first (local Kroki via Docker). Falls back to `https://kroki.io` if local is unreachable. SVG is sanitised before display — `<script>`, inline event handlers, and remote resource references stripped. `<foreignObject>` contents are sanitised rather than stripped, preserving Mermaid 11 node labels."
+          },
+          {
+            "type": "markdown",
+            "id": "e92fc9d71ff88f11",
+            "text": "## Difference from Diagram Plugin"
+          },
+          {
+            "type": "markdown",
+            "id": "15368d405263c671",
+            "text": "The [[Generic Diagram Plugin]] takes a type keyword on the first line (`mermaid`, `graphviz`, `d2`…). This plugin assumes Mermaid — no prefix needed. Use it when you know you're writing Mermaid; use the diagram plugin for mixed or multi-language pages."
+          },
+          {
+            "type": "markdown",
+            "id": "5ea505d6ca2cb706",
+            "text": "## Repositories"
+          },
+          {
+            "type": "markdown",
+            "id": "8a5c200113ea8985",
+            "text": "- [GitHub — wiki-plugin-mermaid](https://github.com/Hitchhikers-Guide-to-the-Galaxy/wiki-plugin-mermaid)\n- [npm — wiki-plugin-mermaid](https://www.npmjs.com/package/wiki-plugin-mermaid)"
+          }
+        ]
+      },
+      "date": 1782388800000,
+      "provenance": "Authored by an AI agent — Claude Code (claude-sonnet-4-6) via the [[fedwiki-create-plugin]] skill. [https://claude.com/claude-code Claude Code]"
+    }
+  ]
+}
