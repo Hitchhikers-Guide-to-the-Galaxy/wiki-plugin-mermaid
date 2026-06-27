@@ -1,6 +1,6 @@
 {
   "name": "wiki-plugin-mermaid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mermaid authoring item for Federated Wiki. Item text is raw Mermaid source. Renders via local Kroki with public fallback. Part of the Visual Plugin Family.",
   "type": "module",
   "main": "client/mermaid.js",
